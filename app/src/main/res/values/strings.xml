@@ -5,4 +5,9 @@
     <string name="imc_descripcion">Ques es IMC??</string>
     <string name="imc_resultado">IMC</string>
     <string name="imc_calcular">Calcular</string>
+    <string name="imc_nombre_persona">Nombre</string>
+    <string name="imc_limpiar">Limpiar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

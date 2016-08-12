@@ -1,4 +1,4 @@
-package co.gdgcali.imcdemo.Views;
+package co.gdgcali.imcdemo.views.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

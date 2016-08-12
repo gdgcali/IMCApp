@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Views.IMCCalculoActivity"
+            android:name=".views.activities.IMCCalculoActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Views.IMCDescripcion"></activity>
+        <activity android:name=".views.activities.IMCDescripcion" />
+        <activity android:name=".views.activities.DetalleIMCPersonaActivity"></activity>
     </application>
 
 </manifest>

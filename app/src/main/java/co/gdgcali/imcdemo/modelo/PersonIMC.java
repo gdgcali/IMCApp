@@ -5,9 +5,18 @@ package co.gdgcali.imcdemo.modelo;
  */
 public class PersonIMC {
 
+    private String nombre;
     private double altura;
     private double peso;
     private double imc;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public double getPeso() {
         return peso;
@@ -31,5 +40,10 @@ public class PersonIMC {
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Altura : %f -- Peso : %f -- IMC : %f", altura, peso, imc);
     }
 }
