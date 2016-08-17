@@ -9,10 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,7 +23,7 @@ import co.gdgcali.imcdemo.views.adapter.IMCAdapter;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HistorialIMCFragment extends Fragment implements IHistorialIMCFragmentListener, OnItemClickListener{
+public class HistorialIMCFragment extends Fragment implements IHistorialIMCFragmentListener, OnItemClickListener {
 
     @Bind(R.id.rvIMCs)
     RecyclerView rvIMCs;
@@ -46,16 +45,16 @@ public class HistorialIMCFragment extends Fragment implements IHistorialIMCFragm
         initAdapter();
         initRecyclerView();
 
-        return  view;
+        return view;
     }
 
-    private void initAdapter(){
-        if (adapter == null){
-            adapter = new IMCAdapter(new ArrayList<PersonIMC>(), this);
+    private void initAdapter() {
+        if (adapter == null) {
+            adapter = new IMCAdapter(new ArrayList<PersonIMC>(), this, getContext());
         }
     }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         rvIMCs.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvIMCs.setAdapter(adapter);
     }
@@ -63,6 +62,11 @@ public class HistorialIMCFragment extends Fragment implements IHistorialIMCFragm
     @Override
     public void agregar(PersonIMC personIMC) {
         adapter.add(personIMC);
+    }
+
+    @Override
+    public void agregarListaPersonas(List<PersonIMC> lstPersonIMC) {
+        adapter.addListaPersonas(lstPersonIMC);
     }
 
     @Override

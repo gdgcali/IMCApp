@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,29 +19,41 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/calcular_layout" />
-
-            <fragment
+            <include layout="@layout/calcular_layout"
                 android:layout_width="match_parent"
-                android:layout_height="234dp"
-                android:id="@+id/fragmentHistorialIMC"
-                android:name="co.gdgcali.imcdemo.views.fragment.HistorialIMCFragment"
-                tools:layout="@layout/fragment_historial_imc"/>
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="60dp"
+                android:id="@+id/imgPerfil"
+                android:src="@mipmap/ic_account_box_black_24dp"/>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnDescripcion"
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_gravity="bottom|start"
+            android:tint="@color/white"
+            android:id="@+id/fbAddImgPerfil"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fbAgregarIMC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:text="@string/imc_descripcion"
-            android:background="@color/grisOscuro"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="@color/white"
             android:textColor="@color/white"/>
 
     </FrameLayout>
 
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

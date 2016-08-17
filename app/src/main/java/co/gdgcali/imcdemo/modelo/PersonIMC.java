@@ -1,5 +1,7 @@
 package co.gdgcali.imcdemo.modelo;
 
+import android.net.Uri;
+
 /**
  * Created by jggomezt on 10/08/2016.
  */
@@ -9,6 +11,15 @@ public class PersonIMC {
     private double altura;
     private double peso;
     private double imc;
+    private Uri imgPerfil;
+
+    public Uri getImgPerfil() {
+        return imgPerfil;
+    }
+
+    public void setImgPerfil(Uri imgPerfil) {
+        this.imgPerfil = imgPerfil;
+    }
 
     public String getNombre() {
         return nombre;

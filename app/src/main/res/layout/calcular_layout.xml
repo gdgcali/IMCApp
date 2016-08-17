@@ -1,23 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/imc_nombre_persona" />
-
-        <EditText
-            android:id="@+id/txtNombrePersona"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textAutoComplete" />
+            android:textColorHint="#FF5722">
+
+            <EditText
+                android:id="@+id/txtNombrePersona"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/imc_nombre_persona"
+                android:inputType="textAutoComplete" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#FF5722">
+
+            <EditText
+                android:id="@+id/txtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/imc_peso"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#FF5722">
+
+            <EditText
+                android:id="@+id/txtAltura"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/imc_altura"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -27,55 +71,56 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/imc_peso" />
-
-        <EditText
-            android:id="@+id/txtPeso"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="numberDecimal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorAccent"
+            android:text="@string/imc_imc" />
 
         <TextView
+            android:id="@+id/txtCalculoIMC"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/imc_altura" />
-
-        <EditText
-            android:id="@+id/txtAltura"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:hint="@string/imc_imc_respuesta"
+            android:textStyle="bold|italic"
+            android:textSize="18dp"
+            android:textColor="@color/grisOscuro"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:inputType="numberDecimal" />
+
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:gravity="center">
 
         <Button
             android:id="@+id/btnCalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorAccent"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
             android:text="@string/imc_calcular"
-            android:textColor="@color/white"
-            android:layout_marginRight="30dp"
-            android:background="@color/colorPrimary"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnLimpiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/imc_limpiar"
-            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
             android:layout_toRightOf="@id/btnCalcular"
-            android:background="@color/red"/>
+            android:background="@color/colorPrimary"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/imc_limpiar"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 
