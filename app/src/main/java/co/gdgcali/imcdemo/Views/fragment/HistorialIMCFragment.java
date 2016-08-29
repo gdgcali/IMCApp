@@ -78,10 +78,17 @@ public class HistorialIMCFragment extends Fragment implements IHistorialIMCFragm
     public void onItemClick(PersonIMC personIMC) {
         Intent intent = new Intent(getActivity(), DetalleIMCPersonaActivity.class);
 
+
         intent.putExtra(DetalleIMCPersonaActivity.NOMBRE_KEY, personIMC.getNombre());
         intent.putExtra(DetalleIMCPersonaActivity.ALTURA_KEY, String.valueOf(personIMC.getAltura()));
         intent.putExtra(DetalleIMCPersonaActivity.PESO_KEY, String.valueOf(personIMC.getPeso()));
         intent.putExtra(DetalleIMCPersonaActivity.IMC_KEY, String.valueOf(personIMC.getImc()));
+
+        if(personIMC.getImgPerfil() != null){
+            String url = personIMC.getImgPerfil().toString();
+            intent.putExtra(DetalleIMCPersonaActivity.IMG_PERFIL_KEY, url);
+        }
+
 
         startActivity(intent);
     }

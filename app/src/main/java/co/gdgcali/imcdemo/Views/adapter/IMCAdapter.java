@@ -37,7 +37,7 @@ public class IMCAdapter extends RecyclerView.Adapter<IMCAdapter.ViewHolderIMC> {
     @Override
     public ViewHolderIMC onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.list_item, parent, false);
+                inflate(R.layout.list_item_historial, parent, false);
         return new ViewHolderIMC(view);
     }
 
@@ -47,10 +47,10 @@ public class IMCAdapter extends RecyclerView.Adapter<IMCAdapter.ViewHolderIMC> {
 
         DecimalFormat df = new DecimalFormat("0.00");
 
-        holder.txtIMC.setText(df.format(elemento.getImc()) + " IMC");
+        holder.txtIMC.setText(String.format("%s IMC", df.format(elemento.getImc())));
         holder.txtNombre.setText(elemento.getNombre());
-        holder.txtAltura.setText(String.valueOf(elemento.getAltura()) + " mts");
-        holder.txtPeso.setText(String.valueOf(elemento.getPeso()) + " kgs");
+        holder.txtAltura.setText(String.format("%s mts", String.valueOf(elemento.getAltura())));
+        holder.txtPeso.setText((String.format("%s kgs", String.valueOf(elemento.getPeso()))));
 
         if (elemento.getImgPerfil() == null) {
             Picasso.with(context).load(R.drawable.icon_person).resize(130, 130).centerCrop().into(holder.img);

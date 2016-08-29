@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.gdgcali.imcdemo">
-    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_imc"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".views.activities.IMCCalculoActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".views.activities.IMCDescripcion"
-            android:parentActivityName=".views.activities.IMCLista"
-            android:theme="@style/AppTheme.NoActionbar"/>
-        <activity android:name=".views.activities.DetalleIMCPersonaActivity" />
-        <activity android:name=".views.activities.IMCLista"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionbar"
+            android:parentActivityName=".views.activities.IMCHistorial"/>
+        <activity
+            android:name=".views.activities.IMCDescripcion"
+            android:parentActivityName=".views.activities.IMCHistorial"
+            android:theme="@style/AppTheme.NoActionbar" />
+        <activity
+            android:name=".views.activities.DetalleIMCPersonaActivity"
+            android:theme="@style/AppTheme.NoActionbar"
+            android:parentActivityName=".views.activities.IMCHistorial"/>
+        <activity
+            android:name=".views.activities.IMCHistorial"
             android:theme="@style/AppTheme.NoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

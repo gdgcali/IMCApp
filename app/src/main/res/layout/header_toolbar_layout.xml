@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         android:elevation="4dp"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar" >
 
         <FrameLayout
@@ -25,7 +25,9 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="?attr/actionBarSize"
                 android:layout_marginRight="?attr/actionBarSize"
-                android:src="@mipmap/logo_ekosave"/>
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:src="@mipmap/logo_imc"/>
 
         </FrameLayout>
     </android.support.v7.widget.Toolbar>

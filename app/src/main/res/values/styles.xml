@@ -19,5 +19,9 @@
     <style name="TextLabel" parent="TextAppearance.Design.Hint">
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="NavigationViewTheme" parent="AppTheme">
+        <item name="textAppearanceListItem">@style/TextAppearance.AppCompat.Body2</item>
+    </style>
 </resources>
 

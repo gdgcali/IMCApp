@@ -15,4 +15,12 @@
     <string name="imc_agregar">Adicionar</string>
     <string name="imc_imc">IMC</string>
     <string name="imc_imc_respuesta">El IMC es...</string>
+    <string name="navigation_item_calculo">Calculo IMC</string>
+    <string name="navigation_item_descripcion_imc">IMC Descripción</string>
+    <string name="navigation_item_share">Compartir</string>
+    <string name="navigation_otros">Otros</string>
+    <string name="navigation_item_acerca">Acerca de</string>
+    <string name="icm_desarrollador_android">Desarrollador Android</string>
+    <string name="icm_desarrollador_android_email">juan.gomez01@gmail.com</string>
+    <string name="imc_compartir">Compartir</string>
 </resources>

@@ -4,14 +4,14 @@
 
     <item
         android:id="@+id/menu_item_share"
-        android:title="Compartir"
+        android:title="@string/imc_compartir"
         android:icon="@mipmap/ic_share_black_24dp"
         app:showAsAction="ifRoom"
         />
 
     <item
         android:id="@+id/settings"
-        android:title="imc_descripcion"
+        android:title="@string/imc_descripcion"
         app:showAsAction="never"/>
 
 </menu>

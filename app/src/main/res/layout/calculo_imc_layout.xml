@@ -69,27 +69,34 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="numberDecimal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:textSize="18dp"
-            android:textColor="@color/colorAccent"
-            android:text="@string/imc_imc" />
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/txtCalculoIMC"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:hint="@string/imc_imc_respuesta"
-            android:textStyle="bold|italic"
-            android:textSize="18dp"
-            android:textColor="@color/grisOscuro"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:inputType="numberDecimal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/imc_imc"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/lblIMC"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtCalculoIMC"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/imc_imc_respuesta"
+                android:textColor="@color/grisOscuro"
+                android:textSize="18sp"
+                android:layout_toEndOf="@+id/lblIMC"
+                android:textStyle="bold|italic" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -101,26 +108,24 @@
 
         <Button
             android:id="@+id/btnCalcular"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
-            android:background="@color/colorAccent"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:text="@string/imc_calcular"
-            android:textColor="@color/white" />
+            android:text="@string/imc_calcular" />
 
         <Button
             android:id="@+id/btnLimpiar"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@id/btnCalcular"
-            android:background="@color/colorPrimary"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:text="@string/imc_limpiar"
-            android:textColor="@color/white" />
+            android:text="@string/imc_limpiar" />
 
     </RelativeLayout>
 

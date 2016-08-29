@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/navigation_item_calculo"
+            android:icon="@drawable/ic_accessibility_black_24dp"
+            android:title="@string/navigation_item_calculo" />
+        <item
+            android:id="@+id/navigation_item_descripcion_imc"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="@string/navigation_item_descripcion_imc" />
+
+        <item
+            android:id="@+id/navigation_item_share"
+            android:icon="@mipmap/ic_share_black_24dp"
+            android:title="@string/navigation_item_share" />
+    </group>
+
+    <item android:title="@string/navigation_otros">
+        <menu>
+            <item
+                android:id="@+id/navigation_item_acercade"
+                android:icon="@drawable/ic_speaker_notes_black_24dp"
+                android:title="@string/navigation_item_acerca" />
+
+        </menu>
+
+    </item>
+
+</menu>
